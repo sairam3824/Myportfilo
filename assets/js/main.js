@@ -209,3 +209,25 @@ sr.reveal(`.footer, footer__container`, {
   origin: "bottom",
   distance: "30px",
 });
+
+
+/*=============== SCROLL REVEAL FOR EDUCATION TIMELINE ===============*/
+/* This assumes 'sr' is your ScrollReveal instance, which should already be defined in main.js */
+
+// Animate the timeline items on the left side
+sr.reveal('.education__item:nth-child(odd)', {
+  origin: 'left',
+  distance: '60px',
+  duration: 1000,
+  delay: 200,
+  easing: 'ease-out'
+});
+
+// Animate the timeline items on the right side
+sr.reveal('.education__item:nth-child(even)', {
+  origin: 'right',
+  distance: '60px',
+  duration: 1000,
+  delay: 200,
+  easing: 'ease-out'
+});

@@ -1228,3 +1228,124 @@ body.light-theme {
     border-radius: 0.5rem;
   }
 }
+
+
+
+
+/* from here i have edited */
+/*=============== EDUCATION TIMELINE ===============*/
+.education__container {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* The vertical line of the timeline */
+.education__container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--first-color);
+  transform: translateX(-50%);
+}
+
+.education__item {
+  width: 50%;
+  position: relative;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Alternate items left and right */
+.education__item:nth-child(odd) {
+  padding-right: 4rem;
+  text-align: right;
+  left: 0;
+}
+
+.education__item:nth-child(even) {
+  padding-left: 4rem;
+  text-align: left;
+  left: 50%;
+}
+
+.education__dot {
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  top: 1rem;
+  border: 3px solid var(--body-color);
+}
+
+.education__item:nth-child(odd) .education__dot {
+  right: -8px;
+}
+
+.education__item:nth-child(even) .education__dot {
+  left: -8px;
+}
+
+.education__item_content {
+  background: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px hsla(var(--second-hue), 32%, 8%, 0.2);
+}
+
+.education__date {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--first-color);
+  margin-bottom: .5rem;
+}
+
+.education__degree {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-bottom: .25rem;
+}
+
+.education__university {
+  font-size: var(--normal-font-size);
+  color: var(--text-color-light);
+  margin-bottom: .5rem;
+}
+
+.education__grade {
+  font-size: var(--small-font-size);
+  display: inline-block;
+  background: hsla(var(--first-hue), var(--sat), var(--lig), 0.2);
+  padding: .25rem .5rem;
+  border-radius: .25rem;
+}
+
+/* Responsive timeline for mobile */
+@media screen and (max-width: 768px) {
+  .education__container::before {
+    left: 1rem;
+  }
+
+  .education__item {
+    width: 100%;
+    text-align: left;
+    padding-left: 2.5rem;
+    padding-right: 0;
+  }
+
+  .education__item:nth-child(odd),
+  .education__item:nth-child(even) {
+    left: 0;
+    text-align: left;
+    padding-left: 2.5rem;
+  }
+
+  .education__item:nth-child(odd) .education__dot,
+  .education__item:nth-child(even) .education__dot {
+    left: 1rem;
+    transform: translateX(-50%);
+  }
+}
