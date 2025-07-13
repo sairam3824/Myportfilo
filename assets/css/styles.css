@@ -1349,3 +1349,65 @@ body.light-theme {
     transform: translateX(-50%);
   }
 }
+
+
+
+/*=============== PROJECT TOOLTIP ===============*/
+.work__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.work__button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.project__tooltip-trigger {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  font-size: 1.25rem;
+  color: var(--text-color-light);
+}
+
+.project__tooltip-trigger .project__tooltip-text {
+  visibility: hidden;
+  width: 280px;
+  background-color: hsl(var(--second-hue), 28%, 16%);
+  color: var(--text-color);
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px 15px;
+  position: absolute;
+  z-index: 1000;
+  /* Increased z-index to ensure it appears on top */
+  bottom: 150%;
+  left: 50%;
+  margin-left: -140px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: var(--small-font-size);
+  line-height: 1.5;
+  box-shadow: 0 4px 12px hsla(var(--second-hue), 32%, 8%, 0.4);
+}
+
+/* Arrow for the tooltip */
+.project__tooltip-trigger .project__tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: hsl(var(--second-hue), 28%, 16%) transparent transparent transparent;
+}
+
+.project__tooltip-trigger:hover .project__tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
