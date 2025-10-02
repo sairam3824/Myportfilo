@@ -233,3 +233,54 @@ sr.reveal('.education__item:nth-child(even)', {
   delay: 200,
   easing: 'ease-out'
 });
+
+/* Particle Background */
+const canvas = document.getElementById("bgCanvas");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// fewer particles (25 instead of 60)
+let particles = [];
+for (let i = 0; i < 25; i++) {
+  particles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 2 + 1, // radius
+    dx: (Math.random() - 0.5) * 0.3, // slower x movement
+    dy: (Math.random() - 0.5) * 0.3  // slower y movement
+  });
+}
+
+function drawParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "rgba(255,255,255,0.25)"; // subtle white glow
+  particles.forEach(p => {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fill();
+    p.x += p.dx;
+    p.y += p.dy;
+    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+  });
+  requestAnimationFrame(drawParticles);
+}
+drawParticles();
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+/*=============== SCROLL PROGRESS BAR ===============*/
+const progressBar = document.getElementById("progressBar");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY; // how far scrolled
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  progressBar.style.width = scrollPercent + "%";
+});
+
+
