@@ -102,13 +102,6 @@ To customize this portfolio for your own use:
 - **GitHub**: [sairam3824](https://github.com/sairam3824)
 - **Email**: [Contact through website](https://sairam.orravyn.info)
 
-## Coding Profiles
-
-- **LeetCode**: [sairam3824](https://leetcode.com/u/sairam3824/)
-- **CodeChef**: [sairam2004](https://www.codechef.com/users/sairam2004)
-- **InterviewBit**: [sai-rama-linga-reddy-maruri](https://www.interviewbit.com/profile/sai-rama-linga-reddy-maruri/)
-- **TakeUForward**: [sairam3824](https://takeuforward.org/plus/profile/sairam3824)
-
 ## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
