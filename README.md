@@ -25,29 +25,6 @@ This portfolio website presents my professional journey, technical skills, and p
 - **Services**: Professional offerings and capabilities
 - **Contact**: Ways to connect and collaborate
 
-## Technical Skills Highlighted
-
-### Programming Languages
-- Java (Advanced)
-- Python (Advanced)
-- C++ (Intermediate)
-
-### AI/ML & GenAI
-- TensorFlow, PyTorch, Scikit-learn
-- OpenAI API, Hugging Face, LangChain
-- BERT, T5, Qwen models
-- Neural Networks and Deep Learning
-
-### Cloud & DevOps
-- AWS, Azure
-- Docker, Terraform
-- Git, n8n automation
-
-### Backend Development
-- Node.js
-- MySQL, MongoDB
-- RESTful APIs
-
 ## Technologies Used
 
 - **Frontend**: HTML5, CSS3, JavaScript
@@ -118,12 +95,6 @@ To customize this portfolio for your own use:
 - Progressive loading techniques
 - SEO-friendly structure
 
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
 
 ## Contact
 
@@ -144,8 +115,6 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Acknowledgments
 
-- Icons by [Boxicons](https://boxicons.com/)
-- Animations powered by [Swiper.js](https://swiperjs.com/)
 - Inspiration from modern portfolio design trends
 
 ---
